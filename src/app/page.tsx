@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import {PageLayout} from "@/components/PageLayout/PageLayout";
-import {LayoutWrapper} from "@/components/LayoutWrapper/LayoutWrapper";
+import { PageLayout } from "@/components/PageLayout/PageLayout";
+import { LayoutWrapper } from "@/components/LayoutWrapper/LayoutWrapper";
+import { services } from "@/configs/services";
 
 export default function Home() {
   return (
@@ -26,7 +26,15 @@ export default function Home() {
       </LayoutWrapper>
 
       <LayoutWrapper>
-        <h3>ABOUT</h3>
+        <div className="flex flex-col items-center">
+          <h2 className="text-3xl mb-[38px]">Основные услуги:</h2>
+
+          <ul>
+            {services.map(s => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
+        </div>
       </LayoutWrapper>
     </PageLayout>
   )
