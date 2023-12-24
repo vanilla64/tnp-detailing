@@ -24,6 +24,10 @@ export default function Home() {
           </p>
         </div>
       </LayoutWrapper>
+
+      <LayoutWrapper>
+        <h3>ABOUT</h3>
+      </LayoutWrapper>
     </PageLayout>
   )
 }
